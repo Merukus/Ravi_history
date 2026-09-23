@@ -234,3 +234,226 @@
 .ravi-data{height:auto;min-height:100%;overflow:visible!important;padding-bottom:22px}.ravi-portrait{height:auto;min-height:0;align-self:start;position:sticky;top:0}.portrait-frame{height:auto;max-height:none}.portrait-frame img{height:auto;max-height:430px;object-fit:contain}
 .timeline-score-wrapper{overflow:hidden!important;padding-bottom:2px}.timeline-scroll{display:block;width:100%;max-width:100%;min-width:0;overflow-x:scroll!important;overflow-y:hidden!important;padding-bottom:34px!important;scrollbar-width:auto;scrollbar-color:#9b7b43 #17160f;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.timeline-scroll::-webkit-scrollbar{height:11px}.timeline-scroll::-webkit-scrollbar-track{background:#17160f;border-top:1px solid rgba(183,151,87,.18)}.timeline-scroll::-webkit-scrollbar-thumb{background:#9b7b43;border:2px solid #17160f;border-radius:8px}.timeline-help{flex:0 0 auto;margin-top:5px;padding-bottom:2px}
 }
+
+/* =========================================================
+   V7 — EMBED ADAPTATIVO UNIVERSAL
+   El documento se adapta al viewport REAL que recibe del embed.
+   No depende de 700x700 ni de un ancho fijo.
+   ========================================================= */
+
+html,body{
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+}
+
+#scene,#archive{
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+}
+
+/* El archivo siempre calcula su contenido con el espacio disponible. */
+#archive{
+  overflow:hidden !important;
+}
+
+.archive-header{
+  height:clamp(76px,16vh,145px);
+  padding:clamp(10px,3vh,28px) clamp(14px,5vw,5vw) clamp(9px,2.5vh,22px);
+}
+
+.archive-brand h1{
+  font-size:clamp(32px,min(7vw,9vh),82px);
+}
+
+.archive-brand p{
+  margin-top:clamp(5px,1.4vh,13px);
+  font-size:clamp(5px,1vw,8px);
+}
+
+.archive-tabs{
+  height:clamp(36px,7vh,55px);
+  min-height:36px;
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+
+.archive-tab{
+  padding:0 clamp(10px,2.4vw,24px);
+  font-size:clamp(5px,.8vw,8px);
+  white-space:nowrap;
+}
+
+.archive-content{
+  width:min(1500px,calc(100% - clamp(24px,8vw,80px)));
+  height:calc(100% - clamp(119px,23vh,207px));
+  min-height:0;
+  padding:clamp(10px,3vh,42px) 0 clamp(12px,3vh,42px);
+  overflow:hidden !important;
+}
+
+.archive-panel{
+  min-width:0;
+  min-height:0;
+}
+
+/* ---------- DATOS ----------
+   Scroll vertical SIEMPRE disponible cuando haga falta. */
+.archive-panel[data-panel="datos"].active{
+  grid-template-columns:minmax(150px,34%) minmax(0,1fr) !important;
+  gap:clamp(12px,5vw,70px) !important;
+  height:100% !important;
+  min-height:0 !important;
+  align-items:start !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  padding-right:8px;
+  padding-bottom:22px;
+  scrollbar-gutter:stable;
+  scrollbar-width:thin;
+  scrollbar-color:#9b7b43 #17160f;
+}
+
+.archive-panel[data-panel="datos"].active::-webkit-scrollbar{width:9px}
+.archive-panel[data-panel="datos"].active::-webkit-scrollbar-track{background:#17160f}
+.archive-panel[data-panel="datos"].active::-webkit-scrollbar-thumb{background:#9b7b43;border:2px solid #17160f;border-radius:8px}
+
+.ravi-portrait{
+  width:100% !important;
+  max-width:450px !important;
+  height:auto !important;
+  min-height:0 !important;
+  align-self:start !important;
+  position:sticky !important;
+  top:0;
+}
+
+.portrait-frame{
+  width:100%;
+  height:auto !important;
+  max-height:none !important;
+}
+
+.portrait-frame img{
+  width:100% !important;
+  height:auto !important;
+  max-height:min(62vh,570px) !important;
+  object-fit:contain !important;
+}
+
+.ravi-data{
+  min-width:0;
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+  padding-bottom:24px;
+}
+
+/* ---------- PANELES DE TEXTO ---------- */
+.text-panel.active{
+  height:100% !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  scrollbar-gutter:stable;
+  scrollbar-width:thin;
+  scrollbar-color:#9b7b43 #17160f;
+}
+
+/* ---------- CRONOLOGÍA ----------
+   La partitura usa todo el ancho del embed y su propio scroll. */
+.archive-panel[data-panel="cronologia"].active{
+  display:flex !important;
+  flex-direction:column;
+  height:100% !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+}
+
+.timeline-header{flex:0 0 auto;min-width:0}
+.timeline-score-wrapper{
+  flex:1 1 auto !important;
+  width:100% !important;
+  min-width:0 !important;
+  min-height:120px !important;
+  overflow:hidden !important;
+}
+
+.timeline-scroll{
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  height:100%;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  padding:clamp(20px,6vh,55px) clamp(10px,3vw,35px) 28px !important;
+  scrollbar-gutter:stable;
+  scrollbar-width:thin;
+  scrollbar-color:#9b7b43 #17160f;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+}
+
+.timeline-scroll::-webkit-scrollbar{height:10px}
+.timeline-scroll::-webkit-scrollbar-track{background:#17160f;border-top:1px solid rgba(183,151,87,.18)}
+.timeline-scroll::-webkit-scrollbar-thumb{background:#9b7b43;border:2px solid #17160f;border-radius:8px}
+
+.timeline-help{
+  flex:0 0 auto;
+  margin-top:5px;
+  white-space:normal;
+  line-height:1.4;
+}
+
+/* ---------- GALERÍA ---------- */
+.archive-panel[data-panel="galeria"].active{
+  height:100% !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+}
+.gallery-viewer{min-width:0;min-height:0}
+.gallery-sidebar{
+  min-height:0;
+  overflow-y:auto !important;
+  scrollbar-width:thin;
+  scrollbar-color:#9b7b43 #17160f;
+}
+
+/* Cuando el embed realmente es estrecho, cambia la composición.
+   El valor solo decide layout; no fija dimensiones del proyecto. */
+@media (max-width:559px){
+  html,body{overflow:hidden !important}
+  #archive{overflow:hidden !important}
+  .archive-content{
+    width:calc(100% - 24px) !important;
+    height:calc(100% - clamp(119px,23vh,185px)) !important;
+    padding:12px 0 16px !important;
+    overflow:hidden !important;
+  }
+  .archive-panel[data-panel="datos"].active{
+    display:block !important;
+    overflow-y:auto !important;
+  }
+  .ravi-portrait{
+    position:relative !important;
+    width:min(72%,300px) !important;
+    margin:0 auto 22px !important;
+  }
+  .portrait-frame img{max-height:48vh !important}
+  .gallery-viewer{height:100%;overflow-y:auto}
+}
+
+/* Embeds bajos: compacta cabecera sin cambiar el tamaño externo. */
+@media (max-height:650px){
+  .archive-header{height:76px;padding-top:9px;padding-bottom:8px}
+  .archive-brand h1{font-size:34px}
+  .archive-brand p{display:none}
+  .archive-tabs{height:38px}
+  .archive-content{height:calc(100% - 119px);padding:10px 0 12px}
+  .timeline-introduction{margin-top:5px}
+  .timeline-score-wrapper{margin-top:5px}
+}
