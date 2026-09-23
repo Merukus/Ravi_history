@@ -504,3 +504,49 @@ html,body{
 }
 .custom-scrollbar-x .custom-thumb:active{cursor:grabbing}
 .custom-scrollbar-x.is-disabled,.custom-scrollbar-y.is-disabled{opacity:.22}
+
+
+/* =========================================================
+   V10 — FIX DATOS
+   La barra personalizada NO debe participar como item del grid.
+   Conserva: retrato izquierda + información derecha.
+   ========================================================= */
+.archive-panel[data-panel="datos"].active{
+  position:relative !important;
+}
+
+/* Sacar la barra del flujo/grid por completo */
+.archive-panel[data-panel="datos"] > .custom-scrollbar-y{
+  position:absolute !important;
+  z-index:80 !important;
+  top:0 !important;
+  right:2px !important;
+  bottom:0 !important;
+  left:auto !important;
+  float:none !important;
+  margin:0 !important;
+  width:8px !important;
+  height:auto !important;
+  align-self:auto !important;
+  justify-self:auto !important;
+}
+
+/* Garantiza el orden original del contenido */
+.archive-panel[data-panel="datos"] > .ravi-portrait{
+  grid-column:1 !important;
+  grid-row:1 !important;
+}
+
+.archive-panel[data-panel="datos"] > .ravi-data{
+  grid-column:2 !important;
+  grid-row:1 !important;
+}
+
+/* En embeds realmente estrechos, vuelve a una sola columna */
+@media (max-width:559px){
+  .archive-panel[data-panel="datos"] > .ravi-portrait,
+  .archive-panel[data-panel="datos"] > .ravi-data{
+    grid-column:auto !important;
+    grid-row:auto !important;
+  }
+}
