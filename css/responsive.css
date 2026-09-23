@@ -226,3 +226,11 @@
   .data-item{padding:6px 5px}
   .archive-quote{margin-top:8px;padding:8px 10px}
 }
+
+/* V6 — SCROLL VISIBLE EN FORO / IFRAME 700x700 */
+@media (min-width:560px) and (max-width:800px){
+.archive-panel[data-panel="datos"].active{height:100%;min-height:0;overflow-y:scroll!important;overflow-x:hidden!important;align-items:start;padding-right:10px;padding-bottom:28px;scrollbar-width:auto;scrollbar-color:#9b7b43 #17160f}
+.archive-panel[data-panel="datos"].active::-webkit-scrollbar{width:10px}.archive-panel[data-panel="datos"].active::-webkit-scrollbar-track{background:#17160f;border-left:1px solid rgba(183,151,87,.18)}.archive-panel[data-panel="datos"].active::-webkit-scrollbar-thumb{background:#9b7b43;border:2px solid #17160f;border-radius:8px}
+.ravi-data{height:auto;min-height:100%;overflow:visible!important;padding-bottom:22px}.ravi-portrait{height:auto;min-height:0;align-self:start;position:sticky;top:0}.portrait-frame{height:auto;max-height:none}.portrait-frame img{height:auto;max-height:430px;object-fit:contain}
+.timeline-score-wrapper{overflow:hidden!important;padding-bottom:2px}.timeline-scroll{display:block;width:100%;max-width:100%;min-width:0;overflow-x:scroll!important;overflow-y:hidden!important;padding-bottom:34px!important;scrollbar-width:auto;scrollbar-color:#9b7b43 #17160f;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.timeline-scroll::-webkit-scrollbar{height:11px}.timeline-scroll::-webkit-scrollbar-track{background:#17160f;border-top:1px solid rgba(183,151,87,.18)}.timeline-scroll::-webkit-scrollbar-thumb{background:#9b7b43;border:2px solid #17160f;border-radius:8px}.timeline-help{flex:0 0 auto;margin-top:5px;padding-bottom:2px}
+}

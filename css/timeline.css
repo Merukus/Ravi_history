@@ -14,3 +14,6 @@
 .timeline-score{box-sizing:border-box;flex:0 0 auto;max-width:none}
 .staff-lines{left:0;right:0;width:auto}
 .timeline-events{flex:0 0 auto;min-width:0}
+
+/* V6 — desplazamiento horizontal táctil/rueda */
+.timeline-scroll{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
