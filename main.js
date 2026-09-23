@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){window.RaviArchive?.connect();window.RaviTimeline?.create();window.RaviGallery?.create();window.RaviIntro?.create()});
