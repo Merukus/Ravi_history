@@ -181,3 +181,48 @@
   .ravi-name{font-size:70px}
   .final-buttons{margin-top:18px}
 }
+
+/* =========================================================
+   V5 — Ajuste real para iframe/foro 700x700
+   ========================================================= */
+@media (min-width:560px) and (max-width:800px){
+  /* DATOS: nunca debe desbordar el cuadro de 700px */
+  .archive-panel[data-panel="datos"].active{
+    grid-template-columns:minmax(150px,34%) minmax(0,1fr);
+    gap:clamp(12px,3vw,22px);
+    align-items:stretch;
+    overflow:hidden;
+  }
+  .ravi-portrait{
+    width:100%;max-width:none;height:100%;min-height:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .portrait-frame{width:100%;height:100%;min-height:0;display:flex;align-items:center;justify-content:center}
+  .portrait-frame img{
+    width:100%;height:100%;max-height:100%;min-height:0;
+    object-fit:contain;object-position:center center;
+  }
+  .ravi-data{min-width:0;min-height:0;height:100%;overflow-y:auto;padding-right:5px}
+  .section-heading h2{font-size:clamp(22px,4.2vw,29px)}
+  .archive-introduction{font-size:clamp(9px,1.55vw,11px)}
+  .data-item strong{font-size:clamp(9px,1.6vw,11px)}
+
+  /* CRONOLOGÍA: solo la zona musical hace scroll horizontal. */
+  .timeline-score-wrapper{width:100%;min-width:0;overflow:hidden}
+  .timeline-scroll{width:100%;min-width:0;max-width:100%;padding:34px 12px 48px}
+  .timeline-score{height:150px;padding-left:38px;padding-right:38px}
+  .timeline-clef{flex:0 0 72px;font-size:84px}
+  .timeline-event{width:64px;height:82px}
+  .timeline-note{width:64px;height:72px}
+  .timeline-note::before{font-size:58px}
+  .timeline-date{width:118px;font-size:5px;letter-spacing:1.1px}
+  .timeline-help{white-space:normal;text-align:center;line-height:1.45}
+}
+
+/* Cuadros todavía más estrechos, pero no móviles verticales */
+@media (min-width:560px) and (max-width:650px){
+  .archive-panel[data-panel="datos"].active{grid-template-columns:minmax(135px,31%) minmax(0,1fr);gap:12px}
+  .data-grid{grid-template-columns:1fr 1fr}
+  .data-item{padding:6px 5px}
+  .archive-quote{margin-top:8px;padding:8px 10px}
+}

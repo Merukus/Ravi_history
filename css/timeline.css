@@ -8,3 +8,9 @@
 .timeline-event:hover .timeline-note,.timeline-event:focus .timeline-note{transform:translate(-50%,-50%) scale(1.16);filter:drop-shadow(0 0 8px rgba(191,153,80,.45));}
 .timeline-event:hover .timeline-note::before,.timeline-event:focus .timeline-note::before{color:#d0ae69;}
 .timeline-date{top:calc(100% + 10px);}
+
+/* V5 — pentagrama y eventos comparten exactamente el mismo ancho */
+.timeline-scroll{min-width:0;overflow-x:auto;overflow-y:hidden}
+.timeline-score{box-sizing:border-box;flex:0 0 auto;max-width:none}
+.staff-lines{left:0;right:0;width:auto}
+.timeline-events{flex:0 0 auto;min-width:0}
