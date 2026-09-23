@@ -1,0 +1,9 @@
+window.raviTimeline=[
+{date:"INFANCIA",title:"Elbaph",description:"Ravi nace en la legendaria tierra de los gigantes, donde es tratado como paria al no interesarse en el combate.",image:"assets/images/ravi/ravi-00.png"},
+{date:"JUVENTUD",title:"Llegada a Zou",description:"Tras vivir parte de su niñez en el bosque de Elbaph, por una coincidencia del destino Zunesha se acerca lo suficiente como para que el pequeño Kyojin busque un nuevo hogar en Zou.",image:"assets/images/ravi/ravi-06.png"},
+{date:"TRIBUS MINK",title:"Primeros registros",description:"Ravi comienza a documentar las diferentes tribus mink y sus diferentes características.",image:"assets/images/ravi/ravi-07.png"},
+{date:"VIAJE",title:"El viaje comienza",description:"Tras documentar las tribus Mink, Ravi decide que es momento de partir de Zou para buscar en otras partes del mar muchos más seres y sonidos.",image:"assets/images/ravi/ravi-08.png"},
+{date:"NAUFRAGIO",title:"El naufragio",description:"Mientras continuaba perdido en sus extraños viajes, fue golpeado por una tormenta y naufragó en una isla llena de animales raros.",image:"assets/images/ravi/ravi-09.png"},
+{date:"PEQUEÑO CAPITÁN",title:"Lux",description:"Durante sus viajes, Ravi conoce a Lux y termina uniéndose a su tripulación, encontrando en aquel pequeño capitán un nuevo rumbo desde el cual continuar explorando el mundo.",image:"assets/images/ravi/ravi-10.png"},
+{date:"LA HERIDA",title:"La curandera del Bosque",description:"Tras caer gravemente enfermo durante una de sus exploraciones, Ravi es salvado por Zolani. Incapaz de olvidar aquella deuda de vida, promete protegerla siempre que ella lo necesite.",image:"assets/images/ravi/ravi-11.png"}
+];
