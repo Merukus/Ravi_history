@@ -17,3 +17,19 @@
 
 /* V6 — desplazamiento horizontal táctil/rueda */
 .timeline-scroll{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+
+
+/* V9 — Modal flotante fuera de los contenedores de la cronología.
+   Mantiene exactamente el tamaño original. */
+body > .timeline-modal{
+  position:fixed !important;
+  z-index:2147483647 !important;
+  width:330px !important;
+  max-width:none !important;
+  max-height:none !important;
+  overflow:visible !important;
+}
+body > .timeline-modal .timeline-modal-image{height:165px !important}
+body > .timeline-modal .timeline-modal-content{padding:18px 21px 21px !important}
+body > .timeline-modal .timeline-modal-title{font-size:23px !important}
+body > .timeline-modal .timeline-modal-description{font-size:12px !important;line-height:1.65 !important}

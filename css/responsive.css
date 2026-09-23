@@ -457,3 +457,50 @@ html,body{
   .timeline-introduction{margin-top:5px}
   .timeline-score-wrapper{margin-top:5px}
 }
+
+/* =========================================================
+   V8 — BARRAS DE DESPLAZAMIENTO PROPIAS
+   No dependen de si el navegador/foro oculta los scrollbars nativos.
+   ========================================================= */
+.archive-panel[data-panel="datos"].active{
+  position:relative !important;
+  padding-right:18px !important;
+  scrollbar-width:none !important;
+}
+.archive-panel[data-panel="datos"].active::-webkit-scrollbar{display:none !important}
+.custom-scrollbar-y{
+  position:sticky;
+  z-index:80;
+  top:0;
+  float:right;
+  margin-right:-16px;
+  width:8px;
+  height:100%;
+  border-radius:10px;
+  background:rgba(155,123,67,.13);
+  pointer-events:auto;
+}
+.custom-scrollbar-y .custom-thumb{
+  position:absolute;left:1px;top:0;width:6px;min-height:28px;
+  border-radius:10px;background:#9b7b43;
+  box-shadow:0 0 0 1px rgba(0,0,0,.35);
+  cursor:grab;
+}
+.custom-scrollbar-y .custom-thumb:active{cursor:grabbing}
+
+.timeline-score-wrapper{position:relative !important;padding-bottom:16px !important}
+.timeline-scroll{scrollbar-width:none !important;padding-bottom:20px !important}
+.timeline-scroll::-webkit-scrollbar{display:none !important}
+.custom-scrollbar-x{
+  position:absolute;z-index:90;left:10px;right:10px;bottom:3px;height:9px;
+  border-radius:10px;background:rgba(155,123,67,.13);
+  pointer-events:auto;
+}
+.custom-scrollbar-x .custom-thumb{
+  position:absolute;left:0;top:1px;height:7px;min-width:34px;
+  border-radius:10px;background:#9b7b43;
+  box-shadow:0 0 0 1px rgba(0,0,0,.35);
+  cursor:grab;
+}
+.custom-scrollbar-x .custom-thumb:active{cursor:grabbing}
+.custom-scrollbar-x.is-disabled,.custom-scrollbar-y.is-disabled{opacity:.22}
